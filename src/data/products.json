@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "img": "https://media.istockphoto.com/id/1366178530/es/foto/recipientes-de-almacenamiento-de-alimentos-de-vidrio-transparente-sobre-fondo-blanco.webp?b=1&s=170667a&w=0&k=20&c=bcvE8Rb5s_Jws71rHfUdVA0gUBfcVSHS_oD1i6goXP0=",
+        "title": "Tupper Ensalada",
+        "price": "$5.92",
+        "description": "Ideal para Insalatti russa",
+        "category": "tupperware"
+    },
+    {
+        "id": "2",
+        "img": "https://media.istockphoto.com/id/1468574416/es/foto/primer-plano-de-cuatro-tupperware-con-fruta-en-un-remolque-al-aire-libre-tirado-a-mano.webp?b=1&s=170667a&w=0&k=20&c=KOiO3iReW5TOfi5PAUbg936-hnf1SrAg2o0bfTKXf-4=",
+        "title": "Tupper Camping",
+        "price": "$0.46",
+        "description": "Ideal para salidas al aire libre",
+        "category":"tupperware"
+    },
+    {
+        "id": "3",
+        "img": "https://media.istockphoto.com/id/1468574379/es/foto/un-hombre-de-primer-plano-sostiene-un-tupperware-lleno-de-tomates.webp?b=1&s=170667a&w=0&k=20&c=YRRq2VSBu_GEoYB63o-47R8SYQGATjJEg5O2JZd1f1o=",
+        "title": "Tupper mini",
+        "price": "$6.91",
+        "description": "Practico y comodo",
+        "category":"tupperware"
+    },
+    {
+        "id": "4",
+        "img": "https://images.unsplash.com/photo-1587310972467-27a5c504bfb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHVwcGVyd2FyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
+        "title": "tupper botella",
+        "price": "$5.18",
+        "description": "800cc",
+        "category":"tupperware"
+    },
+    {
+        "id": "5",
+        "img": "https://images.unsplash.com/photo-1458538977777-0549b2370168?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyZnVtZSUyMGtlbnpvfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
+        "title": "Perfume Mujer Kenzo",
+        "price": "$6.26",
+        "description": "Dulce y floral",
+        "category":"cosmetica"
+    },
+    {
+        "id": "6",
+        "img": "https://images.unsplash.com/photo-1616740794225-63e524d43ec7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y3JlbWElMjBkZSUyMG1hbm9zfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
+        "title": "Nivea",
+        "price": "$8.23",
+        "description": "Crema de manos",
+        "category":"cosmetica"
+    },
+    {
+        "id": "7",
+        "img": "https://images.unsplash.com/photo-1606424359367-af69e3da9832?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3JlbWElMjBkZSUyMGNhcmF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
+        "title": "Crema exfoliante",
+        "price": "$0.94",
+        "description": "Limpieza facial profunda",
+        "category":"cosmetica"
+    },
+    {
+        "id": "8",
+        "img": "https://images.unsplash.com/photo-1683635635577-87781e475568?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGVzY3Vycmlkb3IlMjBkZSUyMGN1YmllcnRvc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
+        "title": "Porta Cubiertos",
+        "price": "$3.22",
+        "description": "Practico y simple",
+        "category":"bazar"
+    },
+    {
+        "id": "9",
+        "img": "https://images.unsplash.com/photo-1676976527022-fdd058e44410?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2V0JTIwZGUlMjBjdWJpZXJ0b3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
+        "title": "Set de cubiertos",
+        "price": "$2.18",
+        "description": "Tramontinetta",
+        "category":"bazar"
+    },
+    {
+        "id": "10",
+        "img": "https://images.unsplash.com/photo-1586197122509-651125c9605a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGl0YWxpYW4lMjBsYXNhZ25hfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
+        "title": "Fuente Horno",
+        "price": "$5.79",
+        "description": "Enlozada",
+        "category":"bazar"
+    }
+]
