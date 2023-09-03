@@ -27,7 +27,7 @@ export const ItemListContainer = (props) => {
             }
 
         });
-    }, []);
+    }, [id]);
 
 
     return (
