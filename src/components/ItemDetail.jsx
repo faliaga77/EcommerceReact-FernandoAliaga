@@ -1,11 +1,29 @@
-export const ItemDetail = ({ product }) => (
-  <div className="carProducts">
-    <img src={product.img} />
-    <h1>{product.title}</h1>
-    <p>{product.description}</p>
-    <div>{product.price}</div>
+import { useContext } from "react";
+import { ItemCount } from "./ItemCount";
+import { CartContext } from "../contexts/CartContext";
 
 
-  </div>
+export const ItemDetail = ({ product }) => {
+  const { addItem } = useContext(CartContext);
+  const onAdd = count => addItem(product, count);
 
-);
+  return (
+    <div className="carDetail">
+      <img style={{ height: "180px" }} variant="top" src={product.img} alt="" />
+      <h1>{product.title}</h1>
+      <p>{product.description}</p>
+      <div>Precio:{`$${product.price}`}</div>
+      <div>Stock:{product.stock}</div>
+      <ItemCount onAdd={onAdd} />
+    </div>
+  );
+};
+
+export default ItemDetail;
+
+
+{/* <Card.Title>{product.title}</Card.Title>
+            <Card.Text>{product.description}</Card.Text>
+            <Card.Text>{`$${product.price}`}</Card.Text>
+            <Card.Text>Stock:{product.stock}</Card.Text>
+            <Link to={`/item/${product.id}`}></Link> */}

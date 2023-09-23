@@ -1,48 +1,47 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import data from "../data/products.json";
 import Container from "react-bootstrap/esm/Container";
 import { ItemList } from "./ItemList";
+import { getFirestore, getDocs, collection } from "firebase/firestore";
 
+export const ItemListContainer = props => {
+    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
 
-
-export const ItemListContainer = (props) => {
-    const [products, setProducts] = useState([]);
-
-    const { id } = useParams();
+    const { id } = useParams()
 
     useEffect(() => {
+        const db = getFirestore();
 
-        const promise = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(data), 2000)
-        });
+        const refCollection = collection(db, "ItemCollection")
 
-        promise.then((data) => {
-            if (!id) {
-                setProducts(data);
-            } else {
-                const productsFiltered = data.filter(
-                    (product) => product.category === id);
-                setProducts(productsFiltered);
-            }
+        getDocs(refCollection)
+           .then(snapshot => {
+            if (snapshot.size === 0) console.log("no results")
+            else
+                setProducts(
+                    snapshot.docs.map(doc  => {
+                        return { id: doc.id, ...doc.data() }
+                    })
+                )
+        })
+        .finally(() => {
+            setLoading(false)
+        })
+    }, [id])
 
-        });
-    }, [id]);
+     if (loading) return <div>Loading...</div>;
 
+return (
 
-    return (
-
-        <Container className="container-style">
-            <h1>Productos</h1>
-            <div className="carProducts">
-                <ItemList products={products} />
-            </div>
-        </Container>
-    );
-
-
-
-
+    <Container className="container-style">
+        <h1>Productos</h1>
+        <div className="carProducts">
+            <ItemList products={products} />
+        </div>
+    </Container>
+);
 };
 
 export default ItemListContainer;
+
