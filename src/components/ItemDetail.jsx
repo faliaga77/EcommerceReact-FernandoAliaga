@@ -3,6 +3,7 @@ import { ItemCount } from "./ItemCount";
 import { CartContext } from "../contexts/CartContext";
 
 
+
 export const ItemDetail = ({ product }) => {
   const { addItem } = useContext(CartContext);
   const onAdd = count => addItem(product, count);
@@ -22,8 +23,3 @@ export const ItemDetail = ({ product }) => {
 export default ItemDetail;
 
 
-{/* <Card.Title>{product.title}</Card.Title>
-            <Card.Text>{product.description}</Card.Text>
-            <Card.Text>{`$${product.price}`}</Card.Text>
-            <Card.Text>Stock:{product.stock}</Card.Text>
-            <Link to={`/item/${product.id}`}></Link> */}

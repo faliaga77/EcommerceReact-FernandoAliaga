@@ -21,7 +21,7 @@ export const ItemListContainer = props => {
             else
                 setProducts(
                     snapshot.docs.map(doc  => {
-                        return { id: doc.id, ...doc.data() }
+                        return { productid: doc.id, ...doc.data() }
                     })
                 )
         })

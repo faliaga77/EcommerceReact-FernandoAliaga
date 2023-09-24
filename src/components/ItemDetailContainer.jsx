@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 import { ItemDetail } from "./ItemDetail";
-import { getDoc, getFirestore, doc } from "firebase/firestore";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+
 
 export const ItemDetailContainer = props => {
     const [product, setProduct] = useState(null);
