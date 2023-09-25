@@ -4,7 +4,7 @@ import { CartContext } from "../contexts/CartContext";
 
 
 export const CheckOut = () => {
-     const {items} = useContext(CartContext) 
+     const {items, removeItem} = useContext(CartContext) 
 
      const total = () => 
      items.reduce((acumulador, valorActual) =>
@@ -19,9 +19,8 @@ export const CheckOut = () => {
                     <thead>
                          <tr>
                               <th>Nombre</th>
-                              <th></th>
-                              <th>Precio</th>
                               <th>Cantidad</th>
+                              <th>Precio</th>
                               <th></th>
                          </tr>
                     </thead>
@@ -29,14 +28,21 @@ export const CheckOut = () => {
                          {items.map(item => (
                               <tr key={item.id}>
                                    <td>{item.title}</td>
-                                   <td>{item.price}</td>
                                    <td>{item.quantity}</td>
+                                   <td>{item.price}</td>
+                                   <td>
+                                        <button
+                                        onClick={() => removeItem(item.id)}>Eliminar producto</button>
+                                   </td>
                             </tr>
                          ))}
                     </tbody>
                     <tfoot>
                          <tr>
                               <td>Total</td>
+                              <td></td>
+                              <td></td>
+                              <td>{total()}</td>
                          </tr>
                     </tfoot>
                </Table>

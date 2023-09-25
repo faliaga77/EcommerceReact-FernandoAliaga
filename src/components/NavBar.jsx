@@ -15,12 +15,8 @@ export const NavBar = () => (
     <Navbar.Brand href='#home'>La Tienda de Ana</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href='/'>Home</Nav.Link>
-       {[...uniqueCategories].map(category => (
-        <Nav.Link
-        as={NavLink}
-        key={category}
-        to={`/category/${category}`}
-         >
+       {[...uniqueCategories].map((category) => (
+        <Nav.Link as={NavLink} key={category} to={`/category/${category}`} >
        {category}
        </Nav.Link>
        ))}
