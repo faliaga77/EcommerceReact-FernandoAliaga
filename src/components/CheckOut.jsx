@@ -15,7 +15,7 @@ export const CheckOut = () => {
           email: "",
      })
 
-     const { items, removeItem } = useContext(CartContext)
+     const { clear, items, removeItem } = useContext(CartContext)
 
      const total = () =>
           items.reduce((acumulador, valorActual) =>
@@ -32,19 +32,22 @@ export const CheckOut = () => {
 
      const sendOrder = () => {
           const order = {
-               buter: {
-                    name: "Aliaga",
-                    phone: 1123541258,
-                    email: "faliaga00@gamil.com",
-               },
-               items: items(),
+               buyer: formValues,
+               items,
                total: total(),
           };
+
           const db = getFirestore();
           const orderCollection = collection(db, "orders");
 
           addDoc(orderCollection, order).then(({ id }) => {
                if (id) {
+                    setFormValues({
+                         name:"",
+                         phone:"",
+                         email:"",
+                    })
+                    clear()
                     alert("Su orden: " + id + "ha sido completada!");
                }
           });
