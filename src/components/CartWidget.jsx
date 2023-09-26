@@ -5,12 +5,12 @@ import { CartContext } from '../contexts/CartContext';
 
 
 export const CartWidget = () => {
-const {totalWidget} = useContext(CartContext);
+    const { totalWidget } = useContext(CartContext);
 
-return (
+    return (
 
-<Link to="/Checkout">
-<img src={cart} alt='Cart' /><span>{totalWidget}</span> 
- </Link>
-)
+        <Link to="/Checkout">
+            <img src={cart} alt='Cart' /><span>{totalWidget}</span>
+        </Link>
+    )
 };
