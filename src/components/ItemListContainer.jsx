@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 import { ItemList } from "./ItemList";
-import { getFirestore, getDocs, collection } from "firebase/firestore";
+import { getFirestore, getDocs, collection, query, where } from "firebase/firestore";
 
 export const ItemListContainer = props => {
     const [products, setProducts] = useState([])
@@ -15,11 +15,13 @@ export const ItemListContainer = props => {
 
         const refCollection = collection(db, "ItemCollection")
 
-        getDocs(refCollection)
+        const q = id ? query(refCollection, where("categoryid", "==", id)) : refCollection;
+        
+
+        getDocs(q)
            .then(snapshot => {
-            if (snapshot.size === 0) console.log("no results")
-            else
-                setProducts(
+            // if (snapshot.size === 0) console.log("no results")
+            setProducts(
                     snapshot.docs.map(doc  => {
                         return { productid: doc.id, ...doc.data() }
                     })
