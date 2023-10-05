@@ -4,6 +4,7 @@ import { CartContext } from "../contexts/CartContext";
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import { getFirestore, collection, addDoc, updateDoc } from "firebase/firestore";
+import swal from "sweetalert";
 
 
 
@@ -48,7 +49,12 @@ export const CheckOut = () => {
                          email:"",
                     })
                     clear()
-                    alert("Su orden: " + id + "ha sido completada!");
+                    swal({
+                         title:"Su orden: ",
+                         text: id + "A sido completada!!!",
+                         icon: "success",
+                         button: "Aceptar",
+                    });
                }
           });
      };
